@@ -12,7 +12,7 @@
     "build": "uglifyjs  ./index.js --compress --mangle > ./index.min.js"
   },
   "devDependencies": {
-    "uglify-js": "^3.12.1"
+    "uglify-js": "^3.17.4"
   },
   "dependencies": {
     "jq-min": "^0.2.3"

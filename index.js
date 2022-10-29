@@ -1,13 +1,12 @@
 /**
- *
- * Requires jq-min (i.e. +2k)
- *
+ * jq-table-sort 0.0.1
+ * 
+ * @requires jq-min (i.e. +2k)
  * @returns
- *
- *   window.initAll = reinitialize all, i.e. tables that have attributes "table-sort")
- *                    (I use it after recreating all items, so it does not prevent initialization of element that was initialized before)
- *                    (also, it runs on DOMContentLoaded so you do not need to call it if you are not changing elements)
- *
+ *   window.tableSort.initAll = reinitialize all, i.e. tables that have attributes "table-sort")
+ *     (I use it after recreating all items, so it does not prevent initialization of element that was initialized before)
+ *     (also, it runs on DOMContentLoaded so you do not need to call it if you are not changing elements)
+ * @license MIT
  */
 (function(){
 
@@ -118,6 +117,5 @@
 
   window.tableSort = {
     initAll,
-    //TODO: изначальная сортировка по колонке - как?
   }
 })();
