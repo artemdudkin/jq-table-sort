@@ -23,5 +23,48 @@ Click on the table first line header to sort it
 </tr>
 </table>
 
+
+<table border="1" table-sort>
+<tr>
+  <th>c1</th>
+</tr>
+<tr>
+ <td>2</td>
+</tr>
+<tr>
+ <td>3</td>
+</tr>
+<tr>
+ <td>1</td>
+</tr>
+</table>
+
 <script src="jq-min-0.2.3.min.js"></script>
 <script src="../index.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    $('body')[0].appendChild($(`<table id="wierd" table-sort>
+<tr>
+  <td>column</td>
+</tr>
+<tr>
+ <td>C 22</td>
+</tr>
+<tr>
+ <td>A 3</td>
+</tr>
+<tr>
+ <td>B 111</td>
+</tr>
+</table>`)[0]
+    );
+  });
+
+  window.tableSort.setReadDataFunc((cell, table) => {
+    if (table.getAttribute("id") === "wierd") {
+      return +cell.innerText.split(' ')[1];
+    }
+  })
+
+  setTimeout( ()=>{window.tableSort.initAll()}, 10);
+</script>
