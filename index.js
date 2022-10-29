@@ -116,6 +116,6 @@
   }
 
   window.tableSort = {
-    initAll,
+//    initAll,
   }
 })();
