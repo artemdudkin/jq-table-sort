@@ -66,5 +66,8 @@ Click on the table first line header to sort it
     }
   })
 
-  setTimeout( ()=>{window.tableSort.initAll()}, 10);
+  setTimeout( ()=>{
+    window.tableSort.initAll();
+    $("#wierd")[0].jqsrt.click(0);
+  }, 10);
 </script>
